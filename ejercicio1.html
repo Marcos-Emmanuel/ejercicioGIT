@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let numeroDeElementos = 10;
+
+        let fibonnaci = new Array(numeroDeElementos);
+        fibonnaci[0]=0;
+        fibonnaci[1]=1;
+        console.log(fibonnaci[0]);
+        console.log(fibonnaci[1]);
+
+        for(let i = 2 ; i<numeroDeElementos ; i++){
+
+            fibonnaci[i]=fibonnaci[i-2]+fibonnaci[i-1];
+            console.log(fibonnaci[i]);
+
+        }
+
+        console.log(fibonnaci);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
