@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <script>
 
-        let nElementos, x=0, y=1, aux;
-        console.log(x);
-        console.log(y);
-        for(let i=2 ; i<nElementos ; i++){
+        let numeroDeElementos =  10;
 
-            aux=x+y;
-            
+        let fibonnaci = new Array(numeroDeElementos);
+        fibonnaci[0]=0;
+        fibonnaci[1]=1;
+        console.log(fibonnaci[0]);
+        console.log(fibonnaci[1]);
+
+        for(let i = 2 ; i<numeroDeElementos ; i++){
+
+            fibonnaci[i]=fibonnaci[i-2]+fibonnaci[i-1];
+            console.log(fibonnaci[i]);
 
         }
 
+        console.log(fibonnaci);
+        
     </script>
-
 </head>
 <body>
     
