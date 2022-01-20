@@ -8,21 +8,48 @@
 
     <script>
 
-        let inicio=["unacadena",3,9,1,10,500,1,10,true];
+        class numberArray{
+            static deleteNonNumbers(arr){
+                for(let i=arr.length-1 ; i>=0 ; i--){
 
-        
+                    if(typeof(arr[i])!="number")arr.splice(i,1);
 
-        for(let i=inicio.length-1 ; i>=0 ; i--){
-
-            if(typeof(inicio[i])!="number"){
-
-                inicio.splice(i,1);
-
+                }//eliminando todos los elementos que NO son números
             }
 
-        }//eliminando todos los elementos que NO son números
+            static sortMintoMax(arr){
+
+                let aux; //variable auxiliar para realizar el cambio de elemento en el arreglo
+
+                for(let i=arr.length-1 ; i>=0 ; i--){
+
+                    for(let j=1 ; j<=i ; j++){
+
+                        if(arr[j]<arr[j-1]){
+                            aux=arr[j];
+                            arr[j]=arr[j-1];
+                            arr[j-1]=aux;
+                        }//comparación y cambio de elemento
+
+                    }//hacer el recorrido uno por uno en base al bucle anterior
+
+                }//recorrer el arreglo desde el final hasta el inicio una vez menos cada iteración para ahorrar procesos
+
+                console.log(arr);                
+            }
+        }
+
+        let inicio=["unacadena",3,9,1,10,500,1,10,true], aux;
+
+        numberArray.deleteNonNumbers(inicio);
+
+        numberArray.sortMintoMax(inicio);
+
+
 
         console.log(inicio);
+
+
 
     </script>
 
