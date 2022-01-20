@@ -35,8 +35,31 @@
 
                 }//recorrer el arreglo desde el final hasta el inicio una vez menos cada iteración para ahorrar procesos
 
-                console.log(arr);                
+                console.log(arr);
             }
+
+            static sortMaxtoMin(arr){
+
+                let aux; //variable auxiliar para realizar el cambio de elemento en el arreglo
+
+                for(let i=arr.length-1 ; i>=0 ; i--){
+
+                    for(let j=1 ; j<=i ; j++){
+
+                        if(arr[j]>arr[j-1]){
+                            aux=arr[j];
+                            arr[j]=arr[j-1];
+                            arr[j-1]=aux;
+                        }//comparación y cambio de elemento
+
+                    }//hacer el recorrido uno por uno en base al bucle anterior
+
+                }//recorrer el arreglo desde el final hasta el inicio una vez menos cada iteración para ahorrar procesos
+
+                console.log(arr);
+
+            }
+
         }
 
         let inicio=["unacadena",3,9,1,10,500,1,10,true], aux;
@@ -45,11 +68,7 @@
 
         numberArray.sortMintoMax(inicio);
 
-
-
-        console.log(inicio);
-
-
+        numberArray.sortMaxtoMin(inicio);
 
     </script>
 
